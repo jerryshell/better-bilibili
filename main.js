@@ -31,7 +31,7 @@
         // 删除视频弹幕列表
         const danmakuBoxElement = document.querySelector('div#danmukuBox');
         if (danmakuBoxElement) {
-            danmakuBoxElement.remove();
+            danmakuBoxElement.childNodes.forEach(node => node.remove());
         }
         // 删除视频弹幕
         const videoDanmakuElement = document.querySelector('div.bilibili-player-video-danmaku')
