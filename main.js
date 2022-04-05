@@ -83,11 +83,16 @@
             searchPanelElement.remove();
         }
         // 删除动态左导航栏
-        const navLinkItemElementList = document.querySelectorAll('li.nav-link-item')
+        const navLinkItemElementList = document.querySelectorAll('li.nav-link-item');
         if (navLinkItemElementList) {
             navLinkItemElementList.forEach(node => {
                 node.remove();
             });
+        }
+        // 删除动态话题
+        const topicPanel = document.querySelector('div.topic-panel');
+        if (topicPanel) {
+            topicPanel.remove();
         }
     }).observe(document.querySelector('body'), {
         childList: true,
