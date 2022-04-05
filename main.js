@@ -76,6 +76,7 @@
         const navSearchInputElement = document.querySelector('input.nav-search-input');
         if (navSearchInputElement) {
             navSearchInputElement.removeAttribute('placeholder');
+            navSearchInputElement.removeAttribute('title');
         }
         // 删除首页搜索栏的热搜面板
         const searchPanelElement = document.querySelector('div.search-panel');
@@ -98,6 +99,7 @@
         const navSearchKeywordElement = document.querySelector('input.nav-search-keyword')
         if (navSearchKeywordElement) {
             navSearchKeywordElement.removeAttribute('placeholder');
+            navSearchKeywordElement.removeAttribute('title');
         }
         // 删除动态搜索栏的热搜面板
         const suggestWrapElement = document.querySelector('div.suggest-wrap.header-search-suggest');
