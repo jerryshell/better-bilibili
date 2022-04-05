@@ -77,6 +77,11 @@
         if (navSearchInputElement) {
             navSearchInputElement.removeAttribute('placeholder');
         }
+        // 删除首页搜索栏的热搜面板
+        const searchPanelElement = document.querySelector('div.search-panel');
+        if (searchPanelElement) {
+            searchPanelElement.remove();
+        }
     }).observe(document.querySelector('body'), {
         childList: true,
         attributes: true,
