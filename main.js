@@ -90,9 +90,14 @@
             });
         }
         // 删除动态话题
-        const topicPanel = document.querySelector('div.topic-panel');
-        if (topicPanel) {
-            topicPanel.remove();
+        const topicPanelElement = document.querySelector('div.topic-panel');
+        if (topicPanelElement) {
+            topicPanelElement.remove();
+        }
+        // 删除动态搜索栏的占位文字
+        const navSearchKeyword = document.querySelector('input.nav-search-keyword')
+        if (navSearchKeyword) {
+            navSearchKeyword.removeAttribute('placeholder');
         }
     }).observe(document.querySelector('body'), {
         childList: true,
