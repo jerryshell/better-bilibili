@@ -47,7 +47,7 @@
                 }
             });
         }
-        // 首页删除分区导航
+        // 删除首页分区导航
         const biliChannel = document.querySelector('div.bili-header__channel');
         if (biliChannel) {
             biliChannel.childNodes.forEach(node => node.remove());
@@ -59,15 +59,18 @@
                 const titleElement = biliGrid.querySelector('a.title');
                 if (titleElement) {
                     const title = titleElement.textContent;
-                    console.log('title', title);
                     if (title.indexOf('科技') === -1 && title.indexOf('纪录片') === -1) {
-                        console.log('remove', biliGrid);
                         biliGrid.remove();
                     }
                 } else {
                     biliGrid.remove();
                 }
             });
+        }
+        // 删除首页左导航栏
+        const leftEntryElement = document.querySelector('ul.left-entry');
+        if (leftEntryElement) {
+            leftEntryElement.remove();
         }
     }).observe(document.querySelector('body'), {
         childList: true,
