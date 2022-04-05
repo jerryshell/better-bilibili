@@ -70,7 +70,7 @@
         // 删除首页左导航栏
         const leftEntryElement = document.querySelector('ul.left-entry');
         if (leftEntryElement) {
-            leftEntryElement.remove();
+            leftEntryElement.childNodes.forEach(node => node.remove());
         }
         // 删除首页搜索栏的占位文字
         const navSearchInputElement = document.querySelector('input.nav-search-input');
