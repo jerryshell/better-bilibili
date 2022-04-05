@@ -82,6 +82,13 @@
         if (searchPanelElement) {
             searchPanelElement.remove();
         }
+        // 删除动态左导航栏
+        const navLinkItemElementList = document.querySelectorAll('li.nav-link-item')
+        if (navLinkItemElementList) {
+            navLinkItemElementList.forEach(node => {
+                node.remove();
+            });
+        }
     }).observe(document.querySelector('body'), {
         childList: true,
         attributes: true,
