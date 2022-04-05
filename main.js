@@ -78,11 +78,6 @@
             navSearchInputElement.removeAttribute('placeholder');
             navSearchInputElement.removeAttribute('title');
         }
-        // 删除首页搜索栏的热搜面板
-        const searchPanelElement = document.querySelector('div.search-panel');
-        if (searchPanelElement) {
-            searchPanelElement.remove();
-        }
         // 删除动态左导航栏
         const navLinkItemElementList = document.querySelectorAll('li.nav-link-item');
         if (navLinkItemElementList) {
@@ -101,10 +96,10 @@
             navSearchKeywordElement.removeAttribute('placeholder');
             navSearchKeywordElement.removeAttribute('title');
         }
-        // 删除动态搜索栏的热搜面板
-        const suggestWrapElement = document.querySelector('div.suggest-wrap.header-search-suggest');
-        if (suggestWrapElement) {
-            suggestWrapElement.remove();
+        // 删除搜索栏的热搜面板
+        const trendingElement = document.querySelector('div.trending');
+        if (trendingElement) {
+            trendingElement.remove();
         }
     }).observe(document.querySelector('body'), {
         childList: true,
