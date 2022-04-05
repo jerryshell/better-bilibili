@@ -95,9 +95,14 @@
             topicPanelElement.remove();
         }
         // 删除动态搜索栏的占位文字
-        const navSearchKeyword = document.querySelector('input.nav-search-keyword')
-        if (navSearchKeyword) {
-            navSearchKeyword.removeAttribute('placeholder');
+        const navSearchKeywordElement = document.querySelector('input.nav-search-keyword')
+        if (navSearchKeywordElement) {
+            navSearchKeywordElement.removeAttribute('placeholder');
+        }
+        // 删除动态搜索栏的热搜面板
+        const suggestWrapElement = document.querySelector('div.suggest-wrap.header-search-suggest');
+        if (suggestWrapElement) {
+            suggestWrapElement.remove();
         }
     }).observe(document.querySelector('body'), {
         childList: true,
