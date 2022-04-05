@@ -72,6 +72,11 @@
         if (leftEntryElement) {
             leftEntryElement.remove();
         }
+        // 删除首页搜索栏的占位文字
+        const navSearchInputElement = document.querySelector('input.nav-search-input');
+        if (navSearchInputElement) {
+            navSearchInputElement.removeAttribute('placeholder');
+        }
     }).observe(document.querySelector('body'), {
         childList: true,
         attributes: true,
