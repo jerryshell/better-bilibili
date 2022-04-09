@@ -38,19 +38,21 @@
         if (videoDanmakuElement) {
             videoDanmakuElement.remove();
         }
-        // 删除动态评论区
-        const tcList = document.querySelectorAll('div.button-bar.tc-slate');
-        if (tcList) {
-            tcList.forEach(tc => {
-                if (tc.childNodes.length === 3) {
-                    tc.childNodes[1].remove();
-                }
-            });
-        }
         // 删除首页分区导航
         const biliChannel = document.querySelector('div.bili-header__channel');
         if (biliChannel) {
             biliChannel.childNodes.forEach(node => node.remove());
+        }
+        // 删除首页左导航栏
+        const leftEntryElement = document.querySelector('ul.left-entry');
+        if (leftEntryElement) {
+            leftEntryElement.childNodes.forEach(node => node.remove());
+        }
+        // 删除首页搜索栏的占位文字
+        const navSearchInputElement = document.querySelector('input.nav-search-input');
+        if (navSearchInputElement) {
+            navSearchInputElement.removeAttribute('placeholder');
+            navSearchInputElement.removeAttribute('title');
         }
         // 首页只保留【科技】和【纪录片】分区
         const biliGridList = document.querySelectorAll('section.bili-grid');
@@ -67,16 +69,14 @@
                 }
             });
         }
-        // 删除首页左导航栏
-        const leftEntryElement = document.querySelector('ul.left-entry');
-        if (leftEntryElement) {
-            leftEntryElement.childNodes.forEach(node => node.remove());
+        // 删除动态评论区
+        const biliDynActionCommentElement = document.querySelector('div.bili-dyn-action.comment');
+        if (biliDynActionCommentElement) {
+            biliDynActionCommentElement.remove();
         }
-        // 删除首页搜索栏的占位文字
-        const navSearchInputElement = document.querySelector('input.nav-search-input');
-        if (navSearchInputElement) {
-            navSearchInputElement.removeAttribute('placeholder');
-            navSearchInputElement.removeAttribute('title');
+        const biliDynItemInteractionElement = document.querySelector('div.bili-dyn-item__interaction');
+        if (biliDynItemInteractionElement) {
+            biliDynItemInteractionElement.remove();
         }
         // 删除动态左导航栏
         const navLinkItemElementList = document.querySelectorAll('li.nav-link-item');
