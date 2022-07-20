@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Bilibili
 // @namespace    jerryshell
-// @version      0.1
+// @version      0.2
 // @description  更好的 Bilibili
 // @author       github.com/jerryshell
 // @match        *://*.bilibili.com/*
@@ -16,17 +16,9 @@
     'use strict';
     new MutationObserver(() => {
         // 删除视频评论区
-        const videoCommentElement = document.querySelector('div.bb-comment');
+        const videoCommentElement = document.querySelector('div.bili-comment');
         if (videoCommentElement) {
             videoCommentElement.remove();
-        }
-        const videoBHeadElement = document.querySelector('div.b-head');
-        if (videoBHeadElement) {
-            videoBHeadElement.remove();
-        }
-        const videoReviewElement = document.querySelector('div#review_module');
-        if (videoReviewElement) {
-            videoReviewElement.remove();
         }
         // 删除视频弹幕列表
         const danmakuBoxElement = document.querySelector('div#danmukuBox');
@@ -34,9 +26,14 @@
             danmakuBoxElement.childNodes.forEach(node => node.remove());
         }
         // 删除视频弹幕
-        const videoDanmakuElement = document.querySelector('div.bilibili-player-video-danmaku')
+        const videoDanmakuElement = document.querySelector('div.b-danmaku');
         if (videoDanmakuElement) {
             videoDanmakuElement.remove();
+        }
+        // 删除视频弹幕发送
+        const videoDanmakuSendElement = document.querySelector('div.bpx-player-sending-area');
+        if (videoDanmakuSendElement) {
+            videoDanmakuSendElement.remove();
         }
         // 删除首页分区导航
         const biliChannel = document.querySelector('div.bili-header__channel');
